@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f1f1f1;
+}
+
+/*NAV BAR*/
+.navbar {
+  background-color: #F77F00;
+  height: 120px;
+  padding-left: 120px;
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+ }
+
+.nav_title {
+  font-weight: bold;
+  width: 125px;
+  font-size: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+.nav_links {
+  margin-left: 625px;
+  padding: 20px 10px;
+  display: flex;
+  font-weight: bold;
+}
+
+.nav_index, 
+.nav_dashboard, 
+.nav_about {
+  font-size: larger;
+  margin: 0px 20px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.nav_index:hover, 
+.nav_dashboard:hover, 
+.nav_about:hover {
+  background-color: rgba(23, 20, 20, 0.549);
+  box-shadow: rgba(95, 93, 93, 0.745);
+}
+
+/*SLIDES*/
+
+.slides {
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.slide {
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+  inset: 0;
+  animation: slide-show 12s infinite;
+}
+
+.slide-2 {
+  animation-delay: 4s;
+}
+
+.slide-3 {
+  animation-delay: 8s;
+}
+.slide-4 {
+  animation-delay: 10s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@keyframes slide-show {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20%,
+  30% {
+    opacity: 1;
+    scale: 1.03;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    margin: 1rem auto; 
+    width: 80%; 
+}
+
+  
+  .card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+    padding: 1rem;
+    margin: 0.5rem;
+    width: calc(25% - 1.5rem); 
+    text-align: center; 
+  }
+
+  .card:hover{
+    background-color: rgba(189, 189, 189, 0.514);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem; 
+  }
+  
+  .card h2 {
+    margin: 0 0 0.5rem; 
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card {
+      width: calc(50% - 1rem);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .card {
+      width: 100%; 
+    }
+  }

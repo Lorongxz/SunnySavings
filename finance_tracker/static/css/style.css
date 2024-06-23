@@ -1,0 +1,481 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+    color: #2c2f32;
+}
+
+p {
+    color: #2c2f32;
+}
+
+h2 {
+    color: #2c2f32;
+}
+
+/*NAV BAR*/
+.navbar {
+    background-color: #F77F00;
+    height: 120px;
+    padding-left: 120px;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+   }
+  
+  .nav_title {
+    font-weight: bold;
+    width: 125px;
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+  
+  .nav_links {
+    margin-left: 625px;
+    padding: 20px 10px;
+    display: flex;
+    font-weight: bold;
+  }
+  
+  .nav_index, 
+  .nav_dashboard, 
+  .nav_about {
+    font-size: larger;
+    margin: 0px 20px;
+    padding: 10px;
+    border-radius: 50px;
+  }
+  
+  .nav_index:hover, 
+  .nav_dashboard:hover, 
+  .nav_about:hover {
+    background-color: rgba(23, 20, 20, 0.549);
+    box-shadow: rgba(95, 93, 93, 0.745);
+  }
+
+  
+/*CONTENT*/
+.content {
+    width: 100%;
+    height: 583.5px;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/*BALANCE AND HISTORY OF TRANSACTIONS*/
+.container_1 {
+    background-color: transparent;
+    width: 55%;
+    height: 100%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    
+}
+
+#welcome_guest {
+    display: flex;
+    gap: 10px;
+}
+#welcome {
+    margin-bottom: 5px;
+} 
+#guest {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.content_bg {
+    background-color: #fbe9d0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: #2c2f324a 0px 8px 8px;
+
+}
+
+.content_balance {
+    background-color: #F77F00;
+    width: 100%;
+    height: 40%;
+    margin-bottom: 15px;
+    padding: 0px 20px;
+    border-radius: 3px;
+    box-shadow: #2c2f324a 0px 8px 8 px;
+
+}
+.current_balance {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#current_balance {
+    font-size: 23px;
+    color: white;
+}
+#current_balance_price {
+    font-size: 60px;
+    letter-spacing: 1px;
+    margin-top: -25px;
+    margin-bottom: 0px;
+    color: white;
+}
+.container_expenses_income {
+    display: flex;
+    justify-content: left;
+}
+
+.total_expenses, 
+.total_income {
+    font-weight: bold;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+#font_color_white_1, #font_color_white_2 {
+    color: white;
+}
+
+#font_color_white_1 {
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
+
+#font_color_white_2 {
+    font-size: 20px;
+}
+
+/*TRANSACTION HISTORY*/
+.content_transaction {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 55%;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: #2c2f324a 0px 8px 15px ;
+
+
+}
+.content_transaction_title {
+
+    font-weight: bold;
+    font-size: 16px;
+    height: 60px;
+    padding: 0px 20px;
+    padding-top: 20px;
+}
+.content_transaction_list {
+    width: 100%;
+    height:30px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category {
+    color: #2c2f32ba;
+    font-size: 15px;
+    width: 24%;
+    text-align: left;
+}
+
+.scroll {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 150px;
+}
+.transaction_data {
+    border: solid 2px #6f5213;
+    margin: 1px 0px;
+    padding: 0px 20px;
+    padding-right: 3px;
+    display: flex;  
+    justify-content: space-between; 
+}
+
+.transaction_date_created,
+.transaction_description,
+.transaction_type,
+.transaction_amount {
+    font-size: smaller;
+    width: 24%;
+    height: 20%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+
+/*ADD TRANSACTION*/
+.container_2 {
+    background-color: #e5e3d8;
+    width:30%;
+    height: 90%;
+    margin-top: 3.4%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: #2c2f324a 2px 8px 5px;
+}
+
+.new_transaction {
+    width: 100%;
+    font-weight: bold;
+    
+}
+
+.form_div {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction_container {
+    width: 100%;
+    height:30%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -10px;
+    gap: 5px;
+}
+
+.amount_label {
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 1px;
+}
+.input_amount {
+    width: 100%;
+    box-shadow: inset 0 0 4px #e4e4e4
+}
+
+.dropdown_label {
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 1px;
+}
+.dropdown {
+    width: 100%;
+    height: 33%;
+    
+}
+
+.description_label {
+    font-size: 15px;
+}
+.input_description {
+    width: 100%;
+    height: 80%;
+}
+
+.btn_index {
+    width: 100%;
+    margin-top: 60px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.back_btn_index {
+    background-color: white;
+    color: #F77F00;
+    width: 100%;
+    height: 30px;
+    padding-top: 2px;
+    text-align: center;
+}
+.confirm_btn_index {
+    background-color: #F77F00;
+    color: white;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+
+}
+
+
+
+/*ACCOUNT HTML STYLES */
+.account_content {
+    width: 100%;
+    padding: 20px 400px;
+}
+
+.container_3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.account_divs {
+    display: flex;
+    background-color: #e5e3d8;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: #2c2f324a 2px 4px 5px;
+
+
+}
+.account_data {
+    width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    
+}
+
+
+.open_btn, .delete_btn {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.delete_btn {
+    color: red;
+}
+
+.orders_acc_btn {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    gap: 420px;
+}
+
+.back_btn_account {
+    background-color: white;
+    color: #F77F00;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.create_btn_account {
+    background-color: #F77F00;
+    color: white;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+}
+
+
+/*CREATE HTML STYLES */
+.create_content {
+    width: 100%;
+    padding: 20px 400px;
+}
+.container_4 {
+    background-color: #e5e3d8;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.name_div {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.fname_div {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+}
+
+#first_name {
+    width: 100%;
+    box-shadow: inset 0 0 4px #e4e4e4
+}
+
+.lname_div {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+}
+
+#last_name {
+    width: 100%;
+    box-shadow: inset 0 0 4px #e4e4e4
+}
+
+.accName {
+    width: 100%;
+}
+#account_name {
+    width: 100%;
+    height: 40px;
+    box-shadow: inset 0 0 4px #e4e4e4
+}
+
+.buttons_create {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 450px;
+}
+.back_btn {
+    background-color: white;
+    color: #F77F00;
+    width: 100%;
+    height: 40px;
+    padding-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+}
+.submit_acc_btn {
+    background-color: #F77F00;
+    height: 40px;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+}

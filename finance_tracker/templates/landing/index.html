@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☀️ Sunny Savings</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+  <div class="navbar">    
+
+    <div class="nav_title">
+        <a href="/">
+            <h1 class="nav_title">Sunny </h1>
+        </a>
+        <div>
+            <a href="/">
+                <h1 class="nav_title">Savings</h1>
+            </a>
+        </div>
+    </div>
+
+    <div class="nav_links">
+
+        <div class="nav_index">
+            <a href="/">Home</a>
+        </div>
+
+        <div class="nav_dashboard">
+            <a href="/account">Dashboard</a>
+        </div>
+
+        <div class="nav_about">
+            <a href="/about">About</a>
+        </div>
+
+    </div>
+
+    <div class="nav_menu_button"></div>
+
+</div>
+
+<div class="slides">
+  <div class="slide slide-1">
+    <img src="{% static 'img/slide1.png' %}" alt="img 1"/>
+  </div>
+
+  <div class="slide slide-2"> <img src="{% static 'img/slide2.png' %}" alt=""/>
+  </div>
+  <div class="slide slide-3">
+    <img
+      src="{% static 'img/slide3.png' %}"
+      alt=""
+    />
+  </div>
+  <div class="slide slide-4">
+    <img
+      src="{% static 'img/slide4.png' %}"
+      alt=""
+    />
+  </div>
+</div>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="{% static 'img/icon1.png' %}" alt="Card 1 image">
+      <h2>Smart Saving Mechanism</h2>
+      <p>Organize your finances with our automated savings tools.</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'img/icon2.png' %}" alt="Card 2 image">
+      <h2>Account Creation</h2>
+      <p>Get started in minutes. Open an account and be on your way to managing your finances easily.</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'img/icon3.png' %}" alt="Card 3 image">
+      <h2>Multi-Account Access</h2>
+      <p>See everything in one place. View and manage all your accounts for ultimate convenience.</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'img/icon4.png' %}" alt="Card 4 image">
+      <h2>Secure</h2>
+      <p>Your money is safe with our industry-leading measures.</p>
+    </div>
+  </div>
+    
+  </div>
+</body>
+</html>

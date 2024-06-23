@@ -1,0 +1,79 @@
+{% extends "layouts/base.html" %}
+{% block title %}
+Account Page
+{% endblock title %}
+{% block content %}
+
+{% include "include/messages.html" %}
+
+
+<div class="navbar">    
+
+    <div class="nav_title">
+        <a href="/">
+            <h1 class="nav_title">Sunny </h1>
+        </a>
+        <div>
+            <a href="/">
+                <h1 class="nav_title">Savings</h1>
+            </a>
+        </div>
+    </div>
+
+    <div class="nav_links">
+
+        <div class="nav_index">
+            <a href="/">Home</a>
+        </div>
+
+        <div class="nav_dashboard">
+            <a href="/account">Dashboard</a>
+        </div>
+
+        <div class="nav_about">
+            <a href="/about">About</a>
+        </div>
+
+    </div>
+
+    <div class="nav_menu_button"></div>
+
+</div>
+
+
+<div class="account_content">
+
+    <h2 style="font-weight: bold;">SAVED ACCOUNTS</h2>
+
+    <div class="container_3">
+
+        {% for account in accounts %}
+        <div class="account_divs">
+
+            <div class="account_data">
+                <p style="font-weight: bold;" class="account_name">{{account.account_name}}</p>
+                <p class="account_date">{{account.date_created}}</p>
+            </div>
+
+            <a href="/account/transaction/{{ account.id }}" class="open_btn">Log In</a>
+            <a href="/account/edit/{{ account.id}}" class="open_btn">Edit</a>
+            <a href="/account/delete/{{ account.id }}" class="delete_btn">Delete</a>
+            
+        </div>
+        {% endfor %}
+
+        <div class="orders_acc_btn">
+            <a href="/account" class="back_btn_account">Back</a>
+            <a href="/account/create" class="create_btn_account">Create Account</a>
+        </div>
+
+        <div>
+            <form action="/" method="post">
+                {% csrf_token %}
+            </form>
+        </div>
+        {% endblock content %}
+
+    </div>
+
+</div>

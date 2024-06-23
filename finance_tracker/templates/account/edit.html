@@ -1,0 +1,65 @@
+{% extends "layouts/base.html" %}
+{% block title %}
+Create Account Page{% endblock title %}
+{% block content %}
+
+{% include "include/messages.html" %}
+
+<div class="navbar">    
+
+    <div class="nav_title">
+        <a href="/">
+            <h1 class="nav_title">Sunny </h1>
+        </a>
+        <div>
+            <a href="/">
+                <h1 class="nav_title">Savings</h1>
+            </a>
+        </div>
+    </div>
+
+    <div class="nav_links">
+
+        <div class="nav_index">
+            <a href="/">Home</a>
+        </div>
+
+        <div class="nav_dashboard">
+            <a href="/account">Dashboard</a>
+        </div>
+
+        <div class="nav_about">
+            <a href="/about">About</a>
+        </div>
+
+    </div>
+
+    <div class="nav_menu_button"></div>
+
+</div>
+
+
+<div class="create_content">
+        
+    <div class="container_4">
+
+        <h2 style="font-weight: bold;">Edit</h2>
+        <form action="/account/update/{{account.id}}" method="post">
+
+            {% csrf_token %}
+            <label for="account_name" class="accName">Account Name</label>
+            <input type="text"id="account_name" name="account_name" required><br><br>
+
+            <div class="buttons_create">
+                <a href="/account" class="back_btn">Back</a>
+                <button type="submit" class="submit_acc_btn">Update</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,166 @@
+{% extends "layouts/base.html" %}
+{% block title %}Transactionc Page{% endblock title %}
+{% block content %}
+
+
+<!--NAVBAR-->
+<div class="navbar">    
+
+    <div class="nav_title">
+        <a href="/">
+            <h1 class="nav_title">Sunny </h1>
+        </a>
+        <div>
+            <a href="/">
+                <h1 class="nav_title">Savings</h1>
+            </a>
+        </div>
+    </div>
+
+    <div class="nav_links">
+
+        <div class="nav_index">
+            <a href="/">Home</a>
+        </div>
+
+        <div class="nav_dashboard">
+            <a href="/account">Dashboard</a>
+        </div>
+
+        <div class="nav_about">
+            <a href="/about">About</a>
+        </div>
+
+    </div>
+
+    <div class="nav_menu_button"></div>
+
+</div>
+
+
+</div>
+
+<!--CONTENT-->
+<div class="content">
+        
+    <div class="container_1">
+
+        <div id="welcome_guest">
+            <h2 id="welcome">Welcome, </h2>
+            <h2 id="guest">{{account.account_name}}!</h2>
+        </div>
+
+        <div class="content_bg">
+            <div class="content_balance">
+
+                <div class="current_balance">
+                        <p id="current_balance">Current Balance:</p>
+                        <p id="current_balance_price">₱{{account.balance}}</p>
+                </div>  
+
+                <div class="container_expenses_income">
+
+                    <div class="total_expenses">
+                        <p id="font_color_white_1">Total Expenses:</p>
+                        <p id="font_color_white_2">₱ {{account.total_expense}}</p>
+                    </div>
+
+                    <div class="total_income">
+                        <p id="font_color_white_1">Total Deposits:</p>
+                        <p id="font_color_white_2">₱ {{account.total_deposit}}</p>
+                    </div>
+
+                </div>
+
+            </div>
+            
+
+            <!--TRANSACTION HISTORY-->
+            <div class="content_transaction">
+
+                <div class="content_transaction_title">
+                    Recent Transactions
+                </div>
+
+                <div class="content_transaction_list">
+                    <div class="category">Date & Time</div>
+                    <div class="category">Description</div>
+                    <div class="category">Type</div>
+                    <div class="category">Amount</div>
+                </div>
+
+                <div class="scroll">
+
+                    {% for transaction in transaction %}
+                    <div class="transaction_data">
+
+                        <div class="transaction_date_created">
+                            <p>{{transaction.date_created}}</p>
+                        </div>
+
+                        <div  class="transaction_description">
+                            <p>{{transaction.description}}</p>
+                        </div>
+
+                        <div class="transaction_type">
+                            <p>{{transaction.transaction_type}}</p>
+                        </div>
+
+                        <div class="transaction_amount">
+                            <p>{{transaction.amount}}</p>
+                        </div>
+
+                    </div>
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--NEW TRANSACTIONS-->
+    <div class="container_2">
+
+        <h3 class="new_transaction">New Transaction</h3>
+            
+        <form class="form_div" action="/account/save_transaction/{{account.id}}" method="post">
+            {% csrf_token %}
+
+            <div class="transaction_container">
+
+                <div>
+                    <label class="amount_label" for="amount">Amount</label>
+                    <input class="input_amount" type="text" id="amount" name="amount">
+                </div>
+                
+                <div>
+                    <label class="dropdown_label" for="amount">Transaction Type</label>
+                    <select class="dropdown" name="transaction_type" id="transaction_type" name="transaction_type">
+                        <option value="deposit">Deposit</option>
+                        <option value="withdraw">Withdraw</option>
+                    </select>
+                </div>
+
+                
+            </div>
+
+            <label class="description_label" for="description">Description & Notes</label>
+            <input class="input_description" type="text" id="description" name="description">
+
+            <div class="btn_index">
+                <a class="back_btn_index" href="/account">LOGOUT</a>
+                <button class="confirm_btn_index" type="submit">CONFIRM</button>
+            </div>
+
+
+        </form>
+
+        
+    </div>
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☀️ Sunny Savings</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+<body>
+    <div class="navbar">    
+
+        <div class="nav_title">
+            <a href="/">
+                <h1 class="nav_title">Sunny </h1>
+            </a>
+            <div>
+                <a href="/">
+                    <h1 class="nav_title">Savings</h1>
+                </a>
+            </div>
+        </div>
+    
+        <div class="nav_links">
+    
+            <div class="nav_index">
+                <a href="/">Home</a>
+            </div>
+    
+            <div class="nav_dashboard">
+                <a href="/account">Dashboard</a>
+            </div>
+    
+            <div class="nav_about">
+                <a href="/about">About</a>
+            </div>
+    
+        </div>
+    
+        <div class="nav_menu_button"></div>
+    
+    </div>
+
+    <div class="slides">
+        <div class="slide slide-1">
+          <img
+            src="{% static 'img/about1.png' %}"
+            alt=""
+          />
+        </div>
+      
+        <div class="slide slide-2">
+          <img
+            src="{% static 'img/about2.png' %}"
+            alt=""
+          />
+        </div>
+        <div class="slide slide-3">
+          <img
+            src="{% static 'img/about3.png' %}"
+            alt=""
+          />
+        </div>
+        <div class="slide slide-4">
+          <img
+            src="{% static 'img/about4.png' %}"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <br>
+
+      <div class="about">
+        <h1>About</h1>
+        <p>Sunny Savings is your one-stop shop for taking control of your finances. 
+            Our secure online platform helps you effortlessly manage your money, all in one place. Set financial 
+            goals and create personalized budgets with our intuitive tools. Track your income and expenses effortlessly, 
+            allowing you to see exactly where your money goes. Gain valuable insights into your spending habits with Sunny Savings' 
+            clear reports and visualizations. Identify areas where you can save and make informed financial decisions.</p>
+    </div>
+
+    </div>
+</body>
+</html>
